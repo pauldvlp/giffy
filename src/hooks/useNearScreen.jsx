@@ -9,9 +9,14 @@ const useNearScreen = ({ justOne = true } = {}) => {
       const entry = entries[0];
       if (entry.isIntersecting) {
         setIsNearScreen(true);
-        observer.disconnect();
+        if (justOne) {
+          observer.unobserve(fromRef.current);
+        }
+      } else {
+        setIsNearScreen(false);
       }
     };
+
     const observer = new IntersectionObserver(handleObserver);
 
     observer.observe(fromRef.current);
