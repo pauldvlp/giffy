@@ -1,9 +1,9 @@
 import { useRoute } from 'wouter';
 import { Link, Route } from 'wouter';
 import Form from './components/Form';
-import Details from './Pages/Details';
-import Home from './Pages/Home';
-import SearchResults from './Pages/SearchResults';
+import Details from './pages/Details';
+import Home from './pages/Home';
+import SearchResults from './pages/SearchResults';
 
 function App() {
   return (

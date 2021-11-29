@@ -1,9 +1,9 @@
 import { Helmet } from 'react-helmet';
-import LazyTrendingSearches from '../../components/LazyTrendingSearches';
-import ListGifs from '../../components/ListGifs';
-import Loader from '../../components/Loader';
-import useGifs from '../../hooks/useGifs';
-import './index.css';
+import LazyTrendingSearches from '../components/LazyTrendingSearches';
+import ListGifs from '../components/ListGifs';
+import Loader from '../components/Loader';
+import useGifs from '../hooks/useGifs';
+import './Home.css';
 
 const Home = () => {
   const { gifs, loading } = useGifs();

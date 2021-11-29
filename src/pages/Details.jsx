@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import { Redirect } from 'wouter';
-import Loader from '../../components/Loader';
-import useSingleGif from '../../hooks/useSingleGif';
+import Loader from '../components/Loader';
+import useSingleGif from '../hooks/useSingleGif';
 
 const Details = ({ params }) => {
   const { id } = params;

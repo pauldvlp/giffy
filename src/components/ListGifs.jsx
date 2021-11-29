@@ -8,8 +8,8 @@ const ListGifs = ({ gifs }) => {
     <div className='gifs-container'>
       {gifs.map((gif) => {
         const { id, images, title } = gif;
-        const { mp4 } = images.original_mp4;
-        return <Gif key={id} {...{ id, title, mp4 }} />;
+        const { url } = images.original;
+        return <Gif key={id} {...{ id, title, url }} />;
       })}
     </div>
   );

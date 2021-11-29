@@ -25,6 +25,7 @@ const useNearScreen = ({ justOne = true } = {}) => {
   return {
     isNearScreen,
     fromRef,
+    setIsNearScreen,
   };
 };
 
