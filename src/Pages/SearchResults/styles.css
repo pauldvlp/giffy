@@ -1,0 +1,19 @@
+.more {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: var(--bgcolor);
+  color: var(--reactcolor);
+  border: 3px solid var(--reactcolor);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.more:active {
+  background-color: var(--reactcolor);
+  color: var(--bgcolor);
+}

@@ -1,0 +1,36 @@
+{
+  "name": "my-vue-app",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "serve": "vite preview",
+    "update": "updates -u && npm i"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-helmet": "6.1.0",
+    "react-icons": "^4.3.1",
+    "vercel": "23.1.2",
+    "wouter": "2.8.0-alpha.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "1.1.0",
+    "updates": "^12.2.2",
+    "vite": "2.6.14"
+  },
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panlar/giffy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panlar/giffy/issues"
+  },
+  "homepage": "https://github.com/panlar/giffy#readme",
+  "description": ""
+}

@@ -1,0 +1,70 @@
+.loader {
+  position: relative;
+  min-height: 100vh;
+}
+
+.gif-loader {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: initial;
+  background-color: var(--bgcolorA);
+}
+
+.gif-loader .ball {
+  --left: -2rem;
+  --right: 2rem;
+  top: calc(50% - 0.5rem);
+  left: calc(50% - 0.5rem);
+  width: 1rem;
+  height: 1rem;
+  animation: ball 4s linear infinite;
+}
+
+.ball {
+  --left: -6.5rem;
+  --right: 6.5rem;
+  position: absolute;
+  top: calc(50% - 1.5rem);
+  left: calc(50% - 1.5rem);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--reactcolor);
+  animation: ball 4s linear infinite;
+}
+.ball:nth-child(2) {
+  animation-delay: -1s;
+}
+.ball:nth-child(3) {
+  animation-delay: -2s;
+}
+.ball:nth-child(4) {
+  animation-delay: -3s;
+}
+
+@keyframes ball {
+  0%,
+  100% {
+    transform: scale(0.5) translate(0, var(--right));
+    opacity: 0.5;
+  }
+
+  25% {
+    transform: translateX(var(--left));
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.5) translate(0, var(--left));
+    opacity: 1;
+  }
+
+  75% {
+    transform: translateX(var(--right));
+    opacity: 0.7;
+  }
+}

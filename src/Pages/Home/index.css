@@ -1,0 +1,42 @@
+.home {
+  display: grid;
+  gap: 1rem;
+}
+
+.trend {
+  display: inline-block;
+  margin: 0.125rem;
+  color: var(--bgcolor);
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.trend:nth-child(4n) {
+  background-color: var(--reactcolor);
+  color: var(--bgcolor);
+}
+
+.trend:nth-child(4n + 1) {
+  background-color: springgreen;
+}
+
+.trend:nth-child(4n + 2) {
+  background-color: magenta;
+  color: #fff;
+}
+
+.trend:nth-child(4n + 3) {
+  background-color: gold;
+}
+
+.trend:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 992px) {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 1rem;
+  }
+}
