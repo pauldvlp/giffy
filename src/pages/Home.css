@@ -3,12 +3,18 @@
   gap: 1rem;
 }
 
+.trendings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
 .trend {
-  display: inline-block;
-  margin: 0.125rem;
+  display: block;
   color: var(--bgcolor);
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: .5rem;
 }
 
 .trend:nth-child(4n) {

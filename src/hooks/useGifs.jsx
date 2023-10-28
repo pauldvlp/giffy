@@ -23,7 +23,12 @@ const useGifs = ({ keyword, rating } = { keyword: null }) => {
   useEffect(() => {
     if (page === INITIAL_PAGE) return;
     getGifs({ keyword: keywordToUse, page }).then(({ data }) => {
-      setGifs((prevGifs) => [...prevGifs, ...data]);
+      setGifs((prevGifs) => {
+        const gifs = [...prevGifs, ...data]
+        const ids = [...new Set(gifs.map(({ id }) => id))]
+        const setOfGifs = ids.map(id => gifs.find(gif => gif.id === id))
+        return setOfGifs
+      });
     });
   }, [page]);
 

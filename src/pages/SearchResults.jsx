@@ -18,7 +18,8 @@ const SearchResults = ({ params }) => {
       setPage((prevPage) => prevPage + 1);
       setIsNearScreen(false);
     }
-  });
+  }, [isNearScreen]);
+
   return (
     <>
       <Helmet>

@@ -3,74 +3,103 @@
   top: 0;
   z-index: 1;
   padding: 1rem 0;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  display: grid;
+  gap: 1rem;
   background-color: var(--bgcolor);
+  grid-template-columns: 3fr 1fr;
 }
 
-.gifs-form.top input {
-  max-width: 1200px;
+
+.logo {
+  grid-column-start: span 2;
+  margin: 0;
+  text-align: center;
+}
+
+.logo a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--reactcolor);
+}
+
+.logo span {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  color: var(--reactcolor);
+}
+.logo span:nth-child(4n + 1) {
+  color: springgreen;
+}
+.logo span:nth-child(4n + 2) {
+  color: magenta;
+}
+.logo span:nth-child(4n + 3) {
+  color: gold;
 }
 
 .gifs-form input {
-  width: 100%;
-  max-width: 400px;
-  padding: 0.5rem 1rem;
-  border: 3px solid transparent;
+  padding: 1rem;
+  border-radius: .5rem;
+  border: none;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
   outline: none;
-  font-size: 1.1rem;
-  transition: 0.5s;
+  background-color: var(--bgcolorA);
+  border: 1px solid var(--reactcolor);
+  color: white;
 }
 
 .gifs-form input:focus {
-  border-color: var(--reactcolor);
-  box-shadow: 0 0 10px var(--reactcolorA), 0 0 20px var(--reactcolorA),
-    0 0 40px var(--reactcolorA);
-}
-.rating,
-.rating-wrapper {
-  background-color: var(--reactcolor);
-  color: var(--bgcolor);
+  outline: var(--reactcolorA) solid 2px;
 }
 
 .rating {
   position: relative;
-  padding: 0.5rem 1rem;
-  min-width: 100px;
+  padding: 1rem;
+  background: white;
+  border-radius: .5rem;
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  white-space: nowrap;
-  cursor: pointer;
   text-transform: uppercase;
+  min-width: 96px;
+  cursor: pointer;
 }
 
 .rating-wrapper {
   position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding: 0.5rem 0;
+  top: calc(100% + .25rem);
+  background-color: white;
+  min-width: 100%;
+  right: 0;
+  padding: .5rem 0;
+  border-radius: .5rem;
+  display: grid;
   transform-origin: top;
-  transform: scale(0);
-  transition: 0.5s;
+  transform: scale(1,0);
+  transition-duration: .3s;
 }
 
 .rating:hover .rating-wrapper {
-  transform: scale(1);
+  transform: scale(1,1);
 }
 
 .rating-option {
-  display: block;
-  padding: 0.5rem 1rem;
-  white-space: nowrap;
-  color: var(--bgcolorA);
-  cursor: pointer;
-  text-align: left;
+  padding: .5rem 1rem;
 }
 
 .rating-option:hover {
-  color: var(--bgcolor);
-  font-weight: 600;
+  background-color: #0001
+}
+
+@media screen and (min-width: 640px) {
+  .gifs-form {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .logo {
+    width: auto;
+    grid-column-start: auto;
+  }
 }

@@ -10,9 +10,9 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Home | PanLar Giffy</title>
+        <title>Inicio | Giffy</title>
       </Helmet>
-      <h2>Ultima busqueda</h2>
+      <h2>Ultima búsqueda</h2>
       <article className='home'>
         {loading ? <Loader /> : <ListGifs {...{ gifs }} />}
         <div>
